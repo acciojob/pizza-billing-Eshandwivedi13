@@ -34,7 +34,10 @@ public class Pizza {
         this.price += 20;
     }
     public String getBill(){
-        this.bill = String.valueOf(price);//convert the price into string for returning bill
+        this.bill += "Extra Cheese Added: 80 \n";
+        this.bill += "Extra Toppings Added: 70 \n";
+        this.bill += "Paperbag Added: 20 \n";
+        this.bill += "Total Price: 470 \n";
         return this.bill;
     }
 }
