@@ -31,8 +31,8 @@ public class Pizza {
             this.price += 70;
             this.bill += "Extra Toppings Added: 70 \n";
         }else{
-            this.price += 130;
-            this.bill += "Extra Toppings Added: 130 \n";
+            this.price += 120;
+            this.bill += "Extra Toppings Added: 120 \n";
         }
     }
     public void addTakeaway(){//added bag and its price
