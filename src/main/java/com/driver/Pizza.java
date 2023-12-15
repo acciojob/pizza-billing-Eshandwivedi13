@@ -9,20 +9,21 @@ public class Pizza {
     private boolean isCheesy;
     private boolean isToppy;
     private boolean isBaggy;
-
+    private boolean billy;
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         this.bill = "";
         if(this.isVeg){
             this.price = 300;
-            this.bill += "Base Price Of The Pizza: 300 \n";
+            this.bill += "Base Price Of The Pizza: 300\n";
         }else{
             this.price = 400;
-            this.bill += "Base Price Of The Pizza: 400 \n";
+            this.bill += "Base Price Of The Pizza: 400\n";
         }
         isCheesy = false;
         isToppy = false;
         isBaggy = false;
+        billy = false;
     }
 
     public int getPrice(){
@@ -49,13 +50,17 @@ public class Pizza {
         }
     }
     public void addTakeaway(){//added bag and its price
-        if (!this.bill.contains("Paperbag Added")) {
+        if (!isBaggy) {
             this.price += 20;
             this.bill += "Paperbag Added: 20 \n";
+            isBaggy = true;
         }
     }
     public String getBill(){
-        this.bill += "Total Price: " + String.valueOf(this.price) +"\n";
+       if(!billy){
+           this.bill += "Total Price: " + String.valueOf(this.price) +"\n";//even only price works here, cuz String + int = string
+           billy = true;
+       }
         return this.bill;
     }
 }
